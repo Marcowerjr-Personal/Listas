@@ -14,6 +14,16 @@ class _AnimatedPageState extends State<AnimatedPage> {
   }
 
   Widget _body() {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Página de Animated'),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        child: Icon(Icons.arrow_back),
+      ),
+    );
   }
 }

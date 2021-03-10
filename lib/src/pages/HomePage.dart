@@ -1,7 +1,6 @@
 import 'dart:core';
 
 import 'package:flutter/material.dart';
-import 'package:listview/src/pages/AlertPage.dart';
 import 'package:listview/src/provider/jsonprovider.dart';
 import 'package:listview/src/utils/StringIcon.dart';
 
