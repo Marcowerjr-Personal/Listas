@@ -42,6 +42,15 @@ class _InputsPageState extends State<InputsPage> {
           Divider(),
           _dateField(context),
           Divider(),
+          _dropField(),
+          ElevatedButton(
+              child: Text('Crear cuenta'),
+              onPressed: () {
+                final snackBar = SnackBar(content: Text('Yay! A SnackBar!'));
+                ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                Fluttertoast.showToast(msg: 'Hola');
+              }),
+          Divider(),
           _showData()
         ],
       );
@@ -132,18 +141,42 @@ class _InputsPageState extends State<InputsPage> {
     }
   }
 
-  Future<void> _toast() async {
-    Fluttertoast.showToast(
-        msg: "This is Center Short Toast",
-        toastLength: Toast.LENGTH_SHORT,
-        gravity: ToastGravity.CENTER,
-        timeInSecForIosWeb: 1,
-        backgroundColor: Colors.red,
-        textColor: Colors.white,
-        fontSize: 16.0);
+  Widget _dropField() => Row(
+        children: <Widget>[
+          Icon(Icons.list),
+          SizedBox(
+            width: 30.0,
+          ),
+          Expanded(
+              child: DropdownButton(
+            items: _opciones(),
+            value: _civil,
+            onChanged: (option) {
+              setState(() {
+                _civil = option;
+              });
+            },
+          ))
+        ],
+      );
+
+  List<DropdownMenuItem<String>> _opciones() {
+    List<DropdownMenuItem<String>> estados = [];
+    _civiles.forEach((element) {
+      estados.add(DropdownMenuItem(child: Text(element), value: element));
+    });
+    return estados;
   }
 
   Widget _showData() => ListTile(
-        title: Text('Name: $_name\nCorreo: $_email\nPassword: $_password'),
+        title: Text('Name: $_name\nCorreo: $_email\nPassword: $_password\nEstado Civil: $_civil'),
       );
+  String _civil = 'Soltero(a)';
+  List<String> _civiles = [
+    'Soltero(a)',
+    'Casado(a)',
+    'Viudo(a)',
+    'Unión Libre',
+    'Es Complicado'
+  ];
 }
