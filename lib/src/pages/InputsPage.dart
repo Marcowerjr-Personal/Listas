@@ -46,9 +46,8 @@ class _InputsPageState extends State<InputsPage> {
           ElevatedButton(
               child: Text('Crear cuenta'),
               onPressed: () {
-                final snackBar = SnackBar(content: Text('Yay! A SnackBar!'));
+                final snackBar = SnackBar(content: Text('Datos Guardados!'));
                 ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                Fluttertoast.showToast(msg: 'Hola');
               }),
           Divider(),
           _showData()

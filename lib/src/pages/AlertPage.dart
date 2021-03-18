@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:listview/src/MyApp.dart';
 
 class AlertPage extends StatelessWidget {
   @override
