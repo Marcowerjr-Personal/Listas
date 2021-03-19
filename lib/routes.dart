@@ -5,6 +5,7 @@ import 'package:listview/src/pages/AvatarPage.dart';
 import 'package:listview/src/pages/CardPage.dart';
 import 'package:listview/src/pages/InputsPage.dart';
 import 'package:listview/src/pages/HomePage.dart';
+import 'package:listview/src/pages/SliderChecksPage.dart';
 
 Map<String, WidgetBuilder> routes(BuildContext context) {
   Map<String, WidgetBuilder> rutas = {
@@ -13,7 +14,8 @@ Map<String, WidgetBuilder> routes(BuildContext context) {
     'avatar'             : (BuildContext context) => AvatarPage(),
     'card'               : (BuildContext context) => CardPage(),
     'animatedContainer'  : (BuildContext context) => AnimatedPage(),
-    'inputs'             : (BuildContext context) => InputsPage()
+    'inputs'             : (BuildContext context) => InputsPage(),
+    'slider'       : (BuildContext context) => SliderChecksPage()
   };
   return rutas;
 }
