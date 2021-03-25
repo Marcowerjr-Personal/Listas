@@ -9,7 +9,6 @@ class SliderChecksPage extends StatefulWidget {
 }
 
 class _SliderCheckPageState extends State<SliderChecksPage> {
-  double _sliderValue = 20;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -40,35 +39,61 @@ class _SliderCheckPageState extends State<SliderChecksPage> {
           _slider(),
           Divider(),
           Text('CheckBox'),
-          _checks()
+          Divider(),
+          _checks(),
+          Divider(),
+          Text('Imagen'),
+          Divider(),
+          _image()
         ],
       );
 
   Widget _slider() => Slider(
         value: _sliderValue,
-        min: 0,
-        max: 100,
+        min: 500,
+        max: _sliderMax,
         divisions: 10,
         label: _sliderValue.round().toString(),
         onChanged: (value) {
           setState(() {
             _sliderValue = value;
+            _imageSize = value;
           });
         },
       );
 
   Widget _checks() => CheckboxListTile(
-        title: const Text('CheckBox'),
+        title: const Text('Deshabilitar Slider'),
         value: timeDilation != 1.0,
         onChanged: (bool value) {
           setState(() {
             if (value) {
-              timeDilation = 2.0;
+              timeDilation = 1.1;
+              _sliderMax = 500;
+              _sliderValue = _sliderMax;
+              _imageSize = _sliderValue;
+
             } else {
               timeDilation = 1.0;
+              _sliderMax = 1000;
+              _sliderValue = 500;
+              _imageSize = _sliderValue;
             }
           });
         },
-        secondary: const Icon(Icons.hourglass_empty),
+        secondary: const Icon(Icons.playlist_add_check),
       );
+
+  Widget _image() => FadeInImage(
+      width: _imageSize - 50,
+      height: _imageSize,
+      fit: BoxFit.cover,
+      fadeInDuration: Duration(milliseconds: 100),
+      image: NetworkImage(
+          'https://images.wallpapersden.com/image/download/assassins-creed-valhalla-4k_bGVpaWiUmZqaraWkpJRobWllrWdma2U.jpg'),
+      placeholder: AssetImage('assets/loading.gif'));
+
+  double _sliderValue = 500;
+  double _sliderMax = 1000;
+  double _imageSize = 500;
 }

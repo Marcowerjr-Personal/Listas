@@ -9,6 +9,13 @@ class AvatarPage extends StatelessWidget {
   Widget _body(BuildContext context) => Scaffold(
     appBar: AppBar(
       title: Text('Página de avatares'),
+      actions: [
+        CircleAvatar(
+          backgroundColor: 
+            Colors.brown.shade800, 
+            child: Text('MC')
+        ),
+      ],
     ),
     floatingActionButton: FloatingActionButton(
       onPressed: () { 
@@ -17,4 +24,6 @@ class AvatarPage extends StatelessWidget {
       child: Icon(Icons.arrow_back)
     ),
   );
+
+
 }
