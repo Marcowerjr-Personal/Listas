@@ -9,7 +9,7 @@ class AvatarPage extends StatelessWidget {
   Widget _body(BuildContext context) => Scaffold(
     appBar: AppBar(
       title: Text('Página de avatares'),
-      actions: [
+      actions: <Widget>[
         CircleAvatar(
           backgroundColor: 
             Colors.brown.shade800, 
