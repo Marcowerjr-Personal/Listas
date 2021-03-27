@@ -1,4 +1,4 @@
-# Tarea Aplicación Sgunda Unidad
+# Tarea Aplicación Segunda Unidad
 
 Integrantes: Marcos Caballero Fernández, Erick Eduardo Dávila Olivas, Luis Daniel Vaquera Delgado
 
