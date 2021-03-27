@@ -72,7 +72,6 @@ class _SliderCheckPageState extends State<SliderChecksPage> {
               _sliderMax = 500;
               _sliderValue = _sliderMax;
               _imageSize = _sliderValue;
-
             } else {
               timeDilation = 1.0;
               _sliderMax = 1000;

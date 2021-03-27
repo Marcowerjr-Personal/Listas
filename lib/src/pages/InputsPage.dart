@@ -168,7 +168,8 @@ class _InputsPageState extends State<InputsPage> {
   }
 
   Widget _showData() => ListTile(
-        title: Text('Name: $_name\nCorreo: $_email\nPassword: $_password\nEstado Civil: $_civil'),
+        title: Text(
+            'Name: $_name\nCorreo: $_email\nPassword: $_password\nEstado Civil: $_civil'),
       );
   String _civil = 'Soltero(a)';
   List<String> _civiles = [

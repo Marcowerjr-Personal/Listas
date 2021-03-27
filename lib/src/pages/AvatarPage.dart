@@ -7,23 +7,24 @@ class AvatarPage extends StatelessWidget {
   }
 
   Widget _body(BuildContext context) => Scaffold(
-    appBar: AppBar(
-      title: Text('Página de avatares'),
-      actions: <Widget>[
-        CircleAvatar(
-          backgroundColor: 
-            Colors.brown.shade800, 
-            child: Text('MC')
+        appBar: _appBar(context),
+        body: Center(
+          child: CircleAvatar(
+              backgroundColor: Colors.brown,
+              child: Text('MC', textScaleFactor: 5),
+              radius: 100),
         ),
-      ],
-    ),
-    floatingActionButton: FloatingActionButton(
-      onPressed: () { 
-        Navigator.pop(context); //me regreso a la página anterior(padre)
-       },
-      child: Icon(Icons.arrow_back)
-    ),
-  );
+        floatingActionButton: FloatingActionButton(
+            onPressed: () {
+              Navigator.pop(context); //me regreso a la página anterior(padre)
+            },
+            child: Icon(Icons.arrow_back)),
+      );
 
-
+  Widget _appBar(BuildContext context) => AppBar(
+        title: Text('Página de avatares'),
+        actions: <Widget>[
+          CircleAvatar(backgroundColor: Colors.brown, child: Text('MC')),
+        ],
+      );
 }
