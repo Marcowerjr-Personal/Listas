@@ -1,9 +1,17 @@
-# Tarea aplicación segunda unidad
+# Tarea Aplicación Sgunda Unidad
 
-Un proyecto de Flutter.
+Integrantes: Marcos Caballero Fernández, Erick Eduardo Dávila Olivas, Luis Daniel Vaquera Delgado
 
-## Integrantes:
+Profesor: M.C. MILTON JOEL BATRES MARQUEZ
 
-Marcos Caballero Fernández
-Erick Eduardo Dávila Olivas
-Luis Daniel Vaquera Delgado
+Materia: DESARROLLO MÓVIL MULTIPLATAFORMA
+
+Grupo: TID51M
+
+Tecnologías de la Información
+
+Área: Desarrollo de Software Multiplataforma
+
+Fecha: 28/03/2021 a las 23:59
+
+Universidad Tecnológica de Chihuahua
