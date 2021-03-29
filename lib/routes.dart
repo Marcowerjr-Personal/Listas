@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:listview/src/pages/AlertPage.dart';
-import 'package:listview/src/pages/AnimatedPage.dart';
-import 'package:listview/src/pages/AvatarPage.dart';
-import 'package:listview/src/pages/CardPage.dart';
-import 'package:listview/src/pages/InputsPage.dart';
-import 'package:listview/src/pages/HomePage.dart';
-import 'package:listview/src/pages/ListPage.dart';
-import 'package:listview/src/pages/SliderChecksPage.dart';
+import 'src/pages/AlertPage.dart';
+import 'src/pages/AnimatedPage.dart';
+import 'src/pages/AvatarPage.dart';
+import 'src/pages/CardPage.dart';
+import 'src/pages/InputsPage.dart';
+import 'src/pages/HomePage.dart';
+import 'src/pages/ListPage.dart';
+import 'src/pages/SliderChecksPage.dart';
 
 Map<String, WidgetBuilder> routes(BuildContext context) {
   Map<String, WidgetBuilder> rutas = {
